@@ -1,0 +1,171 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+// 0 - Variables
+
+$clear: #F5EBD9;
+$clear_bg: #FDF9F4;
+$dark: #94835d;
+$green: #96AF31;
+
+// 1 - Genereal
+
+body {
+	background: $clear;
+	color: #4B4435;
+	font-family: "Cousine", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+h2{
+	font-size: 16px;
+}
+
+h3{
+	text-decoration: underline;
+	margin: 15px 0 15px 25px;
+	position: relative;
+
+	&:before {
+		content: "# ";
+		text-decoration: none;
+		position: absolute;
+		left: -15px;
+	}
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+a {
+	color: $green;
+	text-decoration: none;
+
+	&:hover{
+		color: #C5A47A;
+		text-decoration: underline;
+	}
+}
+
+span.info {
+	border-bottom: 1px dashed $green;
+	display: inline-block;
+	height: 16px;
+	cursor: help;
+
+	&:hover{
+		color: $green;
+	}
+}
+
+ul {
+	display: block;
+	margin: 20px 30px;
+
+	li {
+		padding: 5px 0;
+
+		&:before {
+			content: '- ';
+		}
+	}
+}
+
+pre {
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 20px 10px;
+	background: #FBF3DC !important;
+}
+
+header {
+	background: $clear_bg;
+	width: 900px;
+	margin: 0 auto;
+	padding: 10px 0 3px 0;
+
+	canvas#logo{
+		background: $clear_bg;
+	}
+
+	ul#menu {
+		padding-left: 10px;
+
+		li {
+			display: inline-block;
+			margin: 0;
+
+			&:before {
+				content: none;
+			}
+
+			a {
+				padding: 2px 2px 2px 12px;
+
+
+				&:hover, &.active {
+					background: $dark;
+					color: $clear;
+					text-decoration: none;
+
+					&:before {
+						content: ">";
+						margin-left: -10px;
+						padding-top: 1px;
+						font-size: 13px;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+}
+
+#main {
+	background: $clear_bg;
+	min-height: 600px;
+	width: 900px;
+	margin: 0 auto;
+	padding: 10px;
+	box-sizing: border-box;
+
+	div.bill {
+		margin-top: 30px;
+
+		h2 {
+			font-weight: bold;
+			margin: 10px 0 10px 10px;
+
+			span.date {
+				font-size: 14px;
+				font-weight: normal;
+				color: $green;
+
+				&:before {
+					content: "-";
+					vertical-align: top;
+					margin: 0 0 0 5px;
+				}
+			}
+		}
+
+		p {
+			margin-left: 9px;
+		}
+	}
+
+}
+
+footer {
+	text-align: center;
+	background: #C8C8AA;
+	color: #694D0C;
+	width: 900px;
+	margin: 0 auto;
+	font-size: 12px;
+}
