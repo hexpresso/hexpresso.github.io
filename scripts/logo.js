@@ -3,6 +3,7 @@ $(document).ready(function () {
 	var moved   = false;
 	var alive   = true;
 	var mouse   = {};
+	var interval;
  
 	function Logo(dom, cfg){
 		var self = this;
@@ -25,10 +26,12 @@ $(document).ready(function () {
 			x: $(this.dom).width()/2-330,
 			y: 45
 		};
+
 		this.cubeSize   = {
 			x: 12,
 			y: 12
 		};
+
 		this.repulsive	= [];
 		this.repulsiveLife	= 6000;
 
@@ -50,7 +53,6 @@ $(document).ready(function () {
 			if(alive || this.waveAlive){
 				this.tick++;
 				this.clearScreen();
-
 				this.moveMouse();
 				this.drawMap();
  
@@ -80,15 +82,17 @@ $(document).ready(function () {
  
 		this.genMapFromText = function(text) {
 			this.map = [];
+
 			for (var l = 0; l < text.length; l++) {
 				var letter = [];
+
 				for (var i = 0; i < letters[text[l]].length; i++) {
 					var line = [];
+
 					for (var j = 0; j < letters[text[l]][i].length; j++) {
 						if(this.map[i] === undefined){
 							this.map.push([]);
 						}
- 
 						this.map[i].push(letters[text[l]][i][j]);
 					};
 				};
@@ -116,16 +120,20 @@ $(document).ready(function () {
 			waveDistance = this.distanceBetween({x: x, y: y}, {x: this.waveX, y: y});
 
 			m = 0;
+
 			if(this.repulsive.length){
 				var r = this.repulsive[0];
+
 				if(typeof(r.life) != 'number'){
 					this.repulsive[0].life = this.repulsiveLife;
 				}
+
 				this.repulsive[0].life -= 1;
 				m = Math.sin(this.distanceBetween({x: x, y: y}, r))*Math.sin(this.tick/5);
 				m = this.distanceBetween({x: x, y: y}, r) < (this.repulsiveLife-this.repulsive[0].life)/10 && 
 				this.distanceBetween({x: x, y: y}, r) > (this.repulsiveLife-this.repulsive[0].life)/15 ? Math.abs(m*8) : 0;
 				moved = true;
+
 				if(this.repulsive[0].life <= -this.repulsiveLife){
 					this.repulsive.shift();
 				}
@@ -242,14 +250,14 @@ $(document).ready(function () {
 
 		this.genMapFromText(this.text);
 		this.genCubes();
-		this.interval = window.setInterval(function(){ self.refresh() }, this.fps);
+		interval = window.setInterval(function(){ self.refresh() }, this.fps);
  
 		$(window).blur(function() {
-			clearInterval(this.interval);
+			alive = false;
+			moved = false;
 		});
 
 		$(window).focus(function() {
-			self.interval = window.setInterval(function(){ self.refresh() }, this.fps);
 			alive = true;
 			moved = true;
 		});

@@ -16,9 +16,10 @@ $green: #96AF31;
 body {
 	background: $clear;
 	color: #4B4435;
-	font-family: "Cousine", Arial, sans-serif;
-	font-size: 16px;
+	font-family: Consolas, monaco, monospace;
+	font-size: 14px;
 	line-height: 18px;
+	cursor: text;
 }
 
 h2{
@@ -131,7 +132,8 @@ header {
 	min-height: 600px;
 	width: 900px;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 10px 20px 50px 20px;
+	line-height: 19px;
 	box-sizing: border-box;
 
 	div.bill {

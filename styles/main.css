@@ -70,23 +70,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   background: #F5EBD9;
   color: #4B4435;
-  font-family: "Cousine", Arial, sans-serif;
-  font-size: 16px;
+  font-family: Consolas, monaco, monospace;
+  font-size: 14px;
   line-height: 18px;
+  cursor: text;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 h2 {
   font-size: 16px;
 }
 
-/* line 28, ../sass/main.scss */
+/* line 29, ../sass/main.scss */
 h3 {
   text-decoration: underline;
   margin: 15px 0 15px 25px;
   position: relative;
 }
-/* line 33, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 h3:before {
   content: "# ";
   text-decoration: none;
@@ -94,49 +95,49 @@ h3:before {
   left: -15px;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 p {
   margin-bottom: 15px;
 }
 
-/* line 45, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 a {
   color: #96AF31;
   text-decoration: none;
 }
-/* line 49, ../sass/main.scss */
+/* line 50, ../sass/main.scss */
 a:hover {
   color: #C5A47A;
   text-decoration: underline;
 }
 
-/* line 55, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 span.info {
   border-bottom: 1px dashed #96AF31;
   display: inline-block;
   height: 16px;
   cursor: help;
 }
-/* line 61, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 span.info:hover {
   color: #96AF31;
 }
 
-/* line 66, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 ul {
   display: block;
   margin: 20px 30px;
 }
-/* line 70, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 ul li {
   padding: 5px 0;
 }
-/* line 73, ../sass/main.scss */
+/* line 74, ../sass/main.scss */
 ul li:before {
   content: '- ';
 }
 
-/* line 79, ../sass/main.scss */
+/* line 80, ../sass/main.scss */
 pre {
   padding: 10px;
   box-sizing: border-box;
@@ -144,41 +145,41 @@ pre {
   background: #FBF3DC !important;
 }
 
-/* line 86, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 header {
   background: #FDF9F4;
   width: 900px;
   margin: 0 auto;
   padding: 10px 0 3px 0;
 }
-/* line 92, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 header canvas#logo {
   background: #FDF9F4;
 }
-/* line 96, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 header ul#menu {
   padding-left: 10px;
 }
-/* line 99, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 header ul#menu li {
   display: inline-block;
   margin: 0;
 }
-/* line 103, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 header ul#menu li:before {
   content: none;
 }
-/* line 107, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 header ul#menu li a {
   padding: 2px 2px 2px 12px;
 }
-/* line 111, ../sass/main.scss */
+/* line 112, ../sass/main.scss */
 header ul#menu li a:hover, header ul#menu li a.active {
   background: #94835d;
   color: #F5EBD9;
   text-decoration: none;
 }
-/* line 116, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 header ul#menu li a:hover:before, header ul#menu li a.active:before {
   content: ">";
   margin-left: -10px;
@@ -187,42 +188,43 @@ header ul#menu li a:hover:before, header ul#menu li a.active:before {
   position: absolute;
 }
 
-/* line 129, ../sass/main.scss */
+/* line 130, ../sass/main.scss */
 #main {
   background: #FDF9F4;
   min-height: 600px;
   width: 900px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 20px 50px 20px;
+  line-height: 19px;
   box-sizing: border-box;
 }
-/* line 137, ../sass/main.scss */
+/* line 139, ../sass/main.scss */
 #main div.bill {
   margin-top: 30px;
 }
-/* line 140, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 #main div.bill h2 {
   font-weight: bold;
   margin: 10px 0 10px 10px;
 }
-/* line 144, ../sass/main.scss */
+/* line 146, ../sass/main.scss */
 #main div.bill h2 span.date {
   font-size: 14px;
   font-weight: normal;
   color: #96AF31;
 }
-/* line 149, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 #main div.bill h2 span.date:before {
   content: "-";
   vertical-align: top;
   margin: 0 0 0 5px;
 }
-/* line 157, ../sass/main.scss */
+/* line 159, ../sass/main.scss */
 #main div.bill p {
   margin-left: 9px;
 }
 
-/* line 164, ../sass/main.scss */
+/* line 166, ../sass/main.scss */
 footer {
   text-align: center;
   background: #C8C8AA;
