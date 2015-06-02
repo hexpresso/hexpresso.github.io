@@ -7,7 +7,7 @@ $clear_bg: #FDF9F4;
 $dark: #94835d;
 $green: #96AF31;
 
-// 1 - Genereal
+// 1 - General
 
 body {
 	background: $clear;
@@ -18,11 +18,23 @@ body {
 	cursor: text;
 }
 
-h2{
-	font-size: 16px;
+strong {
+	font-weight: bold;
 }
 
-h3{
+h1 {
+	font-size: 20px;
+	margin: 20px 0 10px 0;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 16px;
+	margin: 20px 0 10px 0;
+	font-weight: bold;
+}
+
+h3 {
 	text-decoration: underline;
 	margin: 15px 0 15px 25px;
 	position: relative;
@@ -131,6 +143,14 @@ header {
 	line-height: 19px;
 	box-sizing: border-box;
 
+	img {
+		max-width: 100%;
+	}
+
+	pre {
+		overflow-x: auto;
+	}
+
 	div.bill {
 		margin-top: 30px;
 
@@ -153,6 +173,28 @@ header {
 
 		p {
 			margin-left: 9px;
+		}
+	}
+
+	div.ctf{
+		display: inline-block;
+		width: 200px;
+		vertical-align: top;
+
+		ul.wu{
+			margin: 0 0 0 20px;
+		}
+
+		ul.wu_hidden{
+			overflow: hidden;
+			height: 0;
+			margin: 0 0 0 20px;
+		}
+
+		a.show_hidden_wu{
+			cursor: pointer;
+			font-size: 12px;
+			height: 20px;
 		}
 	}
 

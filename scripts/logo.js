@@ -234,13 +234,13 @@ $(document).ready(function () {
 		}
  
 		// Events
-		$(this.dom).on('mousemove', {self: self}, function(e) {
+		$(this.dom).bind('mousemove', {self: self}, function(e) {
 			mouse.x = e.offsetX - self.padding.x;
 			mouse.y = e.offsetY - self.padding.y;
 			alive = true;
 		});
 
-		$(this.dom).on('click', {self: self}, function(e) {
+		$(this.dom).bind('click', {self: self}, function(e) {
 			mouse.x = e.offsetX - self.padding.x;
 			mouse.y = e.offsetY - self.padding.y;
 			self.addRepulsive(mouse);
