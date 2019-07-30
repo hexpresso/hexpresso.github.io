@@ -1,50 +1,46 @@
-div#galerie
-{
-  width: 410px ;
-  background: #eed ;
-  border: 1px solid #dcb ;
-  padding: 15px ;
-  margin: 15px 30px ;
-  text-align: center ;
-  font: 0.9em Georgia, serif ;
-}
-
-ul#galerie_mini
-{
-  margin: 0 ;
-  padding: 0 ;
-  list-style-type: none ;
-}
-
-ul#galerie_mini li
-{
-  float: left ;
-}
-
-ul#galerie_mini li a img
-{
-  margin: 2px 1px ;
-  border: 1px solid #dcb ;
-}
-
-dl#photo
-{
-  clear: both ;
-  margin: 0 auto ;
-}
-
-dl#photo dt
-{
-  font: italic 2.5em/1.5em Georgia, serif ;
-  color: #dcb ;
-}
-
-dl#photo dd
-{
-  margin: 0 ;
-}
-
-dl#photo img
-{
-  border: 1px solid #dcb ;
-}
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
